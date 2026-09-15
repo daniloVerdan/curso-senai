@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de cadastro</title>
+</head>
+<body>
+
+    <h1 style="text-align: center;">Cadastro de alunos SENAI</h1>
+    <h2>Dados pessoais:</h2>
+      <form action="">
+        
+        <label for="">Nome:</label>
+        <input type="text" placeholder="Digite seu nome aqui" required>
+        
+        <br>
+
+        <label for="">E-mail:</label>
+        <input type="text" placeholder="Digite seu e-mail aqui" required>
+        
+        <br>
+
+        <label for="">Data de Nascimento:</label>
+        <input type="date" placeholder="Digite o nascimento aqui" required>
+        
+        <br>
+        <p><b>Qual seu genero?</b></p>
+        <label for="masculino">Masculino</label>
+        <input type="radio" name="genero" id="masculino" value="Masculino">&nbsp;&nbsp;&nbsp;
+        <label for="feminino">Feminino</label>
+        <input type="radio" name="genero" id="feminino" value="Feminino">&nbsp;&nbsp;&nbsp;
+        <label for="naoEspecificado">Não especificado</label>
+        <input type="radio" name="genero" id="naoEspecificado" value="Não especificado">
+        <br>
+        <br>
+        <label>Marque se possui alguma deficiencia:</label>
+        <input type="checkbox">
+        <br>
+        <br>
+        <select name="cores">
+            <option selected disabled>Qual sua area de interesse?</option>
+            <option value="Informatica">Informatica</option>
+            <option value="Logistica">Logistica</option>
+            <option value="Impressao 3D">Impressão 3D</option>
+        </select>
+        <br>
+        <br>
+        <textarea name="mensagem" id="" placeholder="Digite aqui suas informações academicas" rows="10" cols="40" required></textarea>
+        
+        <br>
+        <button>Submit</button>
+        
+    </form>
+</body>
+</html>

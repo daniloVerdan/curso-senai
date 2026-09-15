@@ -1,0 +1,60 @@
+a {
+    color: black;
+    border-radius: 8px;
+    border: 1px solid black;
+}
+
+#google {
+    background-image: url(google.jpeg);
+    background-position: center;
+    background-size: 100px;
+    transition: .5s;
+    padding: 15px 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+    &:hover {
+    background-color: red;
+    }
+}
+
+#facebook {
+    background-image: url(facebook.jpeg);
+    transition: .5s;
+    background-position: center;
+    background-size: 100px;
+    padding: 15px 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:hover {
+    background-color: aliceblue;
+    }
+}
+
+#instagram {
+    background-image: url(instagram.jpeg);
+    background-position: center;
+    background-size: 100px;
+    transition: .5s;
+    padding: 15px 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:hover {
+    background-color: rgb(240, 70, 99);
+    }
+}
+
+#youtube {
+    background-image: url(youtube.jpeg);
+    background-position: center;
+    background-size: 100px;
+    transition: .5s;
+    padding: 15px 50px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+    &:hover {
+    background-color: white;
+    }
+}

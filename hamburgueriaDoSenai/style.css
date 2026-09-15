@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.comic-neue-regular {
+  font-family: "Comic Neue", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+    background-image: linear-gradient(135deg, #fbeaff, #b39cd0);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+header {
+    background-color: #b39cd0;
+    color: #845ec2;
+
+    font-size: 30px;
+    font-family: "Comic Neue", cursive;
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    .menu-container {
+        border: 2px solid #b39cd0;
+        border-radius: 8px;
+
+        width: 300px;
+        padding: 16px;
+        margin: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1 {
+            font-size: 25px;
+            color: #845ec2;
+        }
+        h3 {
+            color: #845ec2;
+        }
+
+        p {
+            color: #845ec2;
+        }
+        a {
+            button {
+                background-color: greenyellow;
+                border-radius: 6px;
+            }
+        }
+        img {
+            height: 200px;
+            border-radius: 99%;
+        }
+    }
+    .menu-container2 {
+        border: 2px solid #845ec2;
+        border-radius: 8px;
+        width: 300px;
+        padding: 16px;
+        margin: 32px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: #fbeaff;
+    }
+}
+
+footer {
+    background-color: white;
+
+    padding: 16px;
+
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+
+    h3 {
+        color: #845ec2;
+        font-size: 20px;
+        
+    }
+
+    
+    a {
+        img {
+            height: 40px;
+            width: 40px;
+        }
+    }
+}

@@ -1,0 +1,43 @@
+body {
+    background-color: cyan;
+    div {
+        h3 {
+            align-items: end;
+        }
+    }
+
+}
+
+div {
+    margin:  60px;
+    height: 50px;
+    width: 100px;
+    align-items: end;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    padding: 30px;
+    height: 50px;
+    width: 100px;
+    border-radius: 16px;
+}
+
+#google-btn {
+    background-color: chocolate;
+}
+
+#facebook-btn {
+    background-color: blue;
+}
+
+#instagram-btn {
+    background-color: palevioletred;
+}
+
+#youtube-btn {
+    background-color: red;
+}

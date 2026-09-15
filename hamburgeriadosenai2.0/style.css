@@ -1,0 +1,239 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #64748b;
+}
+
+header {
+
+    padding: 20px 60px;
+    display: flex;
+    justify-content: space-between;
+    font-family: cursive;
+    color: white;
+    text-align: center;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    background-color: rgb(230, 50, 50, .7);
+    position: absolute;
+    
+}
+
+footer {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 100vw;
+    padding: 150px;
+    div {
+        background-color: rgb(230, 50, 50, .7);
+        height: 500px;
+        width: 500px;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 16px;
+
+
+        p {
+        display: flex;
+        
+        justify-content: ;
+        font-family: cursive;
+        font-size: 5px;
+        padding: 20px;
+        font-size: 15px;
+    }
+    iframe {
+        display: flex;
+        align-items: ;
+        justify-content: ;
+        border-radius: 8px;
+        width: 200px;
+        height: 200px;
+        margin-bottom: 20px;
+        margin-right: 20px;
+    }
+}
+}
+
+#contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(red, white);
+    border-top: 8px solid rgb(230, 50, 50);
+    height: 300px;
+    width: 100vw;
+    h1 {
+        font-family: cursive;
+        color: #fde68a;
+        margin-top: 50px;
+        text-shadow: 2px 2px 4px black;
+    }
+    p {
+        font-family: cursive;
+        color: #fde68a;
+        margin-bottom: 50px;
+        text-shadow: 2px 2px 4px black;
+    }
+}
+
+#conheca {
+    div {
+        display: flex;
+        flex-direction: column;
+        justify-content:;
+        align-items: center;
+
+        background-color: white;
+        height: 300px;
+        width: 100vw;
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+        }
+    }
+}
+
+#nav-bar {
+    display: flex;
+    gap: 100px;
+
+    a {
+        font-size: 20px;
+        text-decoration: none;
+        color: #fde68a;
+        width: 100px;
+        
+
+        transition: .2s;
+        &:hover {
+            background-color: #d97706;
+            color: #64748b;
+            border-radius: 16px;
+            padding: 10px;
+        }
+    }
+}
+
+.text-organize {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+
+    h1 {
+
+        background-color: #fcd34d;
+        color: black;
+        font-size: 50px;
+        margin-bottom: 40px;
+        border-radius: 8px;
+        
+    }
+    h3 {
+
+        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+
+        height: 50px;
+        
+        background-color: #fef3c7;
+        color: black;
+        font-size: 30px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-bottom: 40px;
+
+        padding: 20px;
+    }
+    p {
+        height: 100px;
+        width: 500px;
+        
+        background-color: #d97706;
+        color: #fde68a;
+        font-size: 20px;
+        border-radius: 8px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        padding: 20px;
+    }
+}
+
+#container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+#container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+
+    transition: flex-grow 1s ease;
+    transition: 1s;
+}
+
+#container > div:hover {
+    flex-grow: 3;
+
+    padding: 50px;
+
+    .text-organize {
+            display: flex;
+        }
+}
+
+#div-um {
+    background-image: url(assets/images.jpg);
+    
+   
+}
+
+#div-dois {
+    background-image: url(assets/images4.jpg);
+
+   
+}
+#div-tres {
+    background-image: url(assets/lanche.jpg);
+    
+    
+}
+#div-quatro {
+    background-image: url(assets/lanche2.jpg);
+
+   
+}
+#div-cinco {
+    background-image: url(assets/lanche3.jpg);
+
+}

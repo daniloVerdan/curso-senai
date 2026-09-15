@@ -1,0 +1,8 @@
+h1 {
+    color: brown;
+    background-color: black;
+    padding: 5%;
+    text-align: justify;
+    border-radius: 8px;
+    width: 250px;   
+}
