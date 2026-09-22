@@ -215,4 +215,4 @@ function formulaBhaskara(a, b, c) {
 }
 
 const resultado = formulaBhaskara(1, -10, 5);
-console.log(resultado)
+console.log(resultado);
