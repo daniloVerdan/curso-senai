@@ -10,6 +10,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     color: rgb(61, 61, 61);
+    overflow-x: hidden;
 }
 
 body.escuro {
