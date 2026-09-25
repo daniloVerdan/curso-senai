@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(45deg, #dedede, #f0a2a2);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(61, 61, 61);
+}
+
+body.escuro {
+    background: linear-gradient(45deg, #dedede, #121212);
+    color: white;
+}
+
+.app-container {
+    width: 100vw;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    header {
+        background-color: #dedede;
+        padding: 16px;
+        border-radius: 8px;
+
+        color: black;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        gap: 16px;
+        margin-top: 200px;
+
+        h1 {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            letter-spacing: 4px;
+            font-size: 50px;
+        }
+
+        button {
+            all: unset;
+            cursor: pointer;
+            background-color: black;
+            border-radius: 50%;
+            padding: 8px;
+            font-size: 30px;
+        }
+    }
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+    input {
+        font-size: 20px;
+        outline: none;
+        border: none;
+        padding: 16px;
+        width: 400px;
+        border-radius: 8px;
+        border: 1px solid #f0f9ff;
+        
+        &:focus {
+            border: 1px solid #082f49;
+        }
+    }
+    button {
+        all: unset;
+        cursor: pointer;
+        background-color: rgb(148, 138, 138);
+        
+
+        
+        padding: 8px;
+        font-size: 20px;
+        transition: .1s ease-in;
+
+        &:hover {
+            background-color: #dedede;
+            color: darksalmon
+        }
+    }
+}
+
+ol {
+    
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.riscado{
+    text-decoration: line-through;
+    color: red;
+
+}
+
+.item {
+    cursor: pointer;
+}
