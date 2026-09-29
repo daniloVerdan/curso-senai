@@ -1,3 +1,122 @@
 * {
-    background-color: orange;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-y: auto;
+
+}
+
+
+
+header {
+    background-color: rgb(46, 45, 45);
+    color: white;
+    padding: 10px;
+}
+
+#inserir {
+    background-color: #dedede;
+    height: 300px;
+    width: 600px;
+    margin: 30px;
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+#consulta {
+    background-color: #dedede;
+    height: 600px;
+    width: 600px;
+    margin: 30px;
+    border: 1px solid rgb(179, 176, 176);
+    border-radius: 8px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+#corpo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    background-image: url(assets/dragon-ball-our-world-hz-1908x1074.jpg);
+    width: 100vw;
+    height: 100vh;
+
+}
+
+#bloco1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#bloco2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#animeForm {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+    align-items: center;
+    margin-top: 40px;
+
+    input {
+        height: 30px;
+        width: 400px;
+    }
+    button {
+        height: 30px;
+        width: 400px;
+        background-color: rgb(5, 226, 5);
+        color: white;
+    }
+}
+
+#lista {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+.tabela-container {
+  max-height: 450px;
+  width: 500px;
+  overflow-y: auto; 
+}
+
+.tabela-container th {
+  position: sticky;
+  top: 0;
+  background-color: #f2f2f2; 
+  z-index: 1;
 }

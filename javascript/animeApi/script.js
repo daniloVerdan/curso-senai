@@ -21,12 +21,11 @@ async function getAnimes() {
 
     for(let i = 0; i < data.length; i++){
         animesList.innerHTML += `
-            <li>
-                <h2>${data[i]["title"]}</h2>
-                <p>id: ${data[i]["id"]}</p>
-                <p>Rating: ${data[i]["rating"]}</p>
-            </li>
-        `
+            <tr>
+                <td>${data[i]["id"]}</td>
+                <td>${data[i]["title"]}</td>
+                <td>${data[i]["rating"]}</td>
+            </tr>`
     }
     
 }

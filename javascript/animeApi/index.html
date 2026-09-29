@@ -3,24 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
     <link rel="stylesheet" href="style.css">
+    <title>Document</title>
 </head>
 <body>
     <div>
-        <h1>Lista animes:</h1>
-        <ol id="animesList">
-        </ol>
+        <header>
+            <h1>API anime</h1>
+        </header>
     </div>
-
-    <form id="animeForm">
-        <input type="text" name="" id="titleInput" placeholder="Titulo do anime">
-        <input type="text" name="" id="ratingInput" placeholder="Rating do anime">
-        <button type="submit">Enviar</button>
-    </form>
-
-    
+    <div id="corpo">
+        <div id="bloco1">
+            <h2>Adicionar Anime</h2>
+            <div>
+                <div id="inserir">
+                    <form id="animeForm">
+                        <input type="text" name="" id="titleInput" placeholder="Titulo do anime">
+                        <input type="text" name="" id="ratingInput" placeholder="Rating do anime">
+                        <button type="submit">➕ Adicionar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div id="bloco2">
+            <h2>consultar/deletar</h2>
+            <div>
+                <div id="consulta">
+                    <div id="lista">
+                        <h2>Lista animes:</h2>
+                        <div class="tabela-container">
+                        <table>
+                            <thead>
+                                <tr>
+                                <th>ID</th>
+                                <th>Título</th>
+                                <th>Rating</th>
+                                </tr>
+                            </thead>
+                            <tbody id="animesList">
+                                <!-- O JavaScript vai inserir as linhas <tr> aqui -->
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
