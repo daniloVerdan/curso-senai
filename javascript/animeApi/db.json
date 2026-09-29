@@ -1,0 +1,35 @@
+{
+  "animes": [
+    {
+      "id": "1",
+      "title": "DBZ",
+      "rating": 5
+    },
+    {
+      "id": "2",
+      "title": "DBZ",
+      "rating": 4
+    },
+    {
+      "id": "3",
+      "title": "one piece",
+      "rating": 4
+    },
+    {
+      "id": "4",
+      "title": "demon slayer",
+      "rating": 4
+    },
+    {
+      "id": "5",
+      "title": "pokemon",
+      "rating": 3
+    },
+    {
+      "title": "Guren Lagan",
+      "rating": 5,
+      "id": "aQtSQxUhA_o"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
