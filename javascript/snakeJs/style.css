@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: black;
+    overflow: hidden;
+}
+
+#gameContainer {
+    width: 100vw;
+    height: 100vh;
+}
+
+#snake {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: greenyellow;
+}
+
+.fruit {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: orange;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+}
