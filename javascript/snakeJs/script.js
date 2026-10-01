@@ -9,25 +9,25 @@ let esquerda = false
 let direita = false
 
 document.addEventListener("keypress", (event) => {
-    if (event.key === 'w') {
+    if (event.key === 'w'){
         cima = true
         baixo = false
         esquerda = false
         direita = false
     }
-    if (event.key === 's') {
+    if (event.key === 's'){
         cima = false
         baixo = true
         esquerda = false
         direita = false
     }
-    if (event.key === 'a') {
+    if (event.key === 'a'){
         cima = false
         baixo = false
         esquerda = true
         direita = false
     }
-    if (event.key === 'd') {
+    if (event.key === 'd'){
         cima = false
         baixo = false
         esquerda = false
@@ -37,18 +37,32 @@ document.addEventListener("keypress", (event) => {
 
 function moveSnake() {
     let x = snake.offsetLeft
-    let y = snake.offsetRight
+    let y = snake.offsetTop
+
     if(cima) {
-        y += velocidade
+        y -= velocidade
     }
     if(baixo) {
-        y -= velocidade
+        y += velocidade
     }
     if(esquerda) {
         x -= velocidade
     }
     if(direita) {
         x += velocidade
+    }
+    if (x < 0) {
+        x = 0
+    }
+    if (x > window.innerWidth - snake.offsetWidth) {
+        x = window.innerWidth - snake.offsetWidth
+    }
+    if (y < 0) {
+        y = 0
+    }
+
+    if (y > window.innerHeight - snake.offsetHeight) {
+        y = window.innerHeight - snake.offsetHeight
     }
 
     snake.style.left = x + 'px'
@@ -75,4 +89,4 @@ function createFruit() {
 
 
 //setInterval(createFruit,3000)
-//setInterval(moveSnake,500)
+setInterval(moveSnake,500)

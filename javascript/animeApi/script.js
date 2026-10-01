@@ -26,6 +26,7 @@ async function getAnimes() {
                 <td>${data[i]["title"]}</td>
                 <td>${data[i]["rating"]}</td>
             </tr>`
+
     }
     
 }
