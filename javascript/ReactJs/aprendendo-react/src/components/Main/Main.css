@@ -1,0 +1,10 @@
+#main-container {
+    background-color: #dedede;
+    color: rgb(3, 3, 3);
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
