@@ -115,4 +115,76 @@ function showString (obj) {
 showString(countries)
 */
 
+// console.log("olá, mundo!")
 
+// Tipoos Primitivos
+// const numero = 5;
+// const numeroDecimal = 5.43533;
+// const texto = "Olá, Mundo!";
+
+// console.log(texto);
+
+// Tipos de Referencia
+// const array = [5, 25, "texto1", "texto2", [5,97]];
+// const object = {
+//     chave1: "valor1",
+//     chave2: 5,
+//     chave3: "valor3",
+//     chave4: [5,97],
+//     chave5: {
+//         novaChave: 5,
+//     },
+// };
+
+// console.log(array[1])
+// console.log(object.chave2)
+
+// const { chave4 } = object
+
+// console.log(chave4)
+
+// const [valor1, valor2, valor3, valor4, valor5] = array;
+
+// console.log(valor1, valor2)
+
+// const array = [5, 25, "texto1", "texto2", [5,97]];
+
+// const array2 = [...array];
+// array2[0] = 123123
+// console.log(array2)
+// console.log(array)
+
+// da pra fazer a mesma logica com objeto
+
+// == comparação não estrita = estou comparando valores
+// === comparação estrita = estou comparando valores e tipos
+
+// if (5 === "5") {
+//     console.log("sim, é igual");
+// } else {
+//     console.log("não é igual");
+    
+// }
+
+// 5 == "5" ? console.log("Sim, é igual!") : console.log("Não é igual!")
+
+
+// function consoleOi() {
+//     // tudo que eu vou fazer dentro da função
+//     console.log("Oi")
+
+//     //return // posso ou não retornar uma informação
+    
+// }
+
+// const retornoDaFuncao = consoleOi();
+// consoleOi();
+
+const consoleLogOi = () => {
+    console.log("oi");
+
+    return "oi de novo";
+}
+
+const retornoDaFuncao = consoleLogOi();
+console.log(retornoDaFuncao);

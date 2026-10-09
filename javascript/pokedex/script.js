@@ -3,15 +3,15 @@ const apiUrl = 'https://pokeapi.co/api/v2/'
 const pokemonsContainer = document.getElementById("pokemonsContainer")
 
 let page = 1
-let limit = 1000
+let limit = 10000
 
 
 
 async function getPokemons() {
-    const res = await fetch(apiUrl+`pokemon/?offset=${page}&limit=${limit}`)
+    const res = await fetch(apiUrl+`pokemon/?offset=${page - 1}&limit=1`)
     const data = await res.json()
 
-    createPokemonCard(data["results"][page]["url"])
+    createPokemonCard(data.results[0].url)
 
 }
 
