@@ -97,23 +97,23 @@ console.log(result);
 //for of loop;
 */
 
-/*
-//retorna os itens do array que tiverem string
-const countries = {
-    name: 'Japan',
-    population: 125,
-    capital: 'Tokio',
-    economyPosition: 3
-}
 
-function showString (obj) {
-    for (let key in obj)
-        if (typeof obj[key] == 'string')
-            console.log(key, obj[key]);
-}
+    // retorna os itens do array que tiverem string
+    // const countries = {
+    //     name: 'Japan',
+    //     population: 125,
+    //     capital: 'Tokio',
+    //     economyPosition: 3
+    // }
 
-showString(countries)
-*/
+    // function showString (obj) {
+    //     for (let key in obj)
+    //         if (typeof obj[key] == 'string')
+    //             console.log(key, obj[key]);
+    // }
+
+    // showString(countries)
+
 
 // console.log("olá, mundo!")
 
@@ -180,11 +180,56 @@ showString(countries)
 // const retornoDaFuncao = consoleOi();
 // consoleOi();
 
-const consoleLogOi = () => {
+/*const consoleLogOi = () => {
     console.log("oi");
 
     return "oi de novo";
 }
 
 const retornoDaFuncao = consoleLogOi();
-console.log(retornoDaFuncao);
+console.log(retornoDaFuncao);*/
+
+/*const array = ['oi', 2, true, 3, 'danilo'];
+
+function countString(array) {
+    let count = 0;
+
+    for (let element of array)
+        if (typeof element === '')
+            count++;
+    return count;
+
+
+}
+
+let result = countString(array);
+console.log(result);*/
+
+// x = 0;
+// x += 5;
+// x += 4;
+
+// console.log(x);
+
+// function sum(limit) {
+//     let sum = 0;
+
+//     for (let i = 0; i <= limit; i++) {
+//         if (i % 3 === 0 || i % 5 === 0)
+//             sum += i;
+//     }
+
+//     return sum;
+
+    
+// }
+
+// console.log(sum(10))
+
+const marks = [70, 75, 80];
+
+function calculateGrade(array) {
+
+}
+
+console.log(calculateGrade(marks))
