@@ -1,15 +1,17 @@
-import { HeaderContainer, ShoppingCartIconContainer } from "./styled.jsx";
-import { ShoppingCartSimpleIcon } from "@phosphor-icons/react";
+import { useCart } from "../CartContext/CartContext";
+import { HeaderContainer, ShoppingCartIconContainer } from "./styled";
+import { ShoppingCartSimpleIcon } from '@phosphor-icons/react'
 
-export function Header({ totalItens }) {
+export function Header() {
+    const { cartCount } = useCart()
+
     return (
         <HeaderContainer>
+            <h1>Mini Lojinha Do Senai ☠️</h1>
             <ShoppingCartIconContainer>
-                <ShoppingCartSimpleIcon size={60} color="#dbd8df" />
-                <h1></h1>
-                <span> ({totalItens})</span>
+                <ShoppingCartSimpleIcon size={30} color="#ffff" />
+                <span>{cartCount}</span>
             </ShoppingCartIconContainer>
         </HeaderContainer>
-        
     )
 };
