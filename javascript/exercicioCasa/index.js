@@ -1,3 +1,9 @@
+const consoleHTML = document.getElementById("console");
+
+console.log = function (...mensagens) {
+    consoleHTML.textContent += mensagens.join(" ") + "\n";
+};
+
 //Se input for divisiivel por 3 = Fizz
 //Se input for divisivel por 5 = Buzz
 //Se input for divisivel por 3 e 5 = fizzBuzz
@@ -226,10 +232,38 @@ console.log(result);*/
 
 // console.log(sum(10))
 
-const marks = [70, 75, 80];
+// const marks = [70, 75, 80, 85, 99];
 
-function calculateGrade(array) {
+// function calculateGrade(array) {
+//     const average = calculateAverage(array);
 
+//     if (average < 60) return 'E';
+//     if (average < 70) return 'D';
+//     if (average < 80) return 'C';
+//     if (average < 90) return 'B';
+//     return 'A';
+
+// }
+
+// function calculateAverage (array) {
+//     let sum = 0;
+//     for (let mark of array)
+//         sum += mark;
+//     return sum / array.length;
+
+// }
+
+// console.log(calculateGrade(marks))
+
+
+
+function showStars (rows) {
+    for (let row = 1; row <= rows; row++) {
+        let pattern = '';
+        for (let i = 0; i < row; i++)
+            pattern += '*'
+        console.log(pattern);
+    }
 }
 
-console.log(calculateGrade(marks))
+showStars(10)
