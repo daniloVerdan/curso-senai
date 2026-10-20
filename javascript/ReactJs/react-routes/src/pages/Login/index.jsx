@@ -11,14 +11,15 @@ export function Login() {
     const navigate = useNavigate();
 
     function handleLogin(event) {
-        event.preventDefault();
+    event.preventDefault();
 
-        if (usuario === "Danilo" && senha === "1234") {
-            navigate("/home");
-        } else {
-            setMensagem("Usuário ou senha incorretos!");
-        }
+    if (usuario === "admin" && senha === "1234") {
+        sessionStorage.setItem("autenticado", "true");
+        navigate("/home");
+    } else {
+        setMensagem("Usuário ou senha incorretos!");
     }
+}
 
     return (
         <LoginContainer>

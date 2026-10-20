@@ -24,3 +24,4 @@ todoForm.addEventListener('submit', (event) => {
 botao.addEventListener("click", function() {
     document.body.classList.toggle("escuro");
 });
+
