@@ -7,7 +7,7 @@ export function Header() {
 
     return (
         <HeaderContainer>
-            <h1>Mini Lojinha Do Senai ☠️</h1>
+            <h1>React API ☠️</h1>
             <ShoppingCartIconContainer>
                 <ShoppingCartSimpleIcon size={30} color="#ffff" />
                 <span>{cartCount}</span>
