@@ -5,7 +5,7 @@ export function Error() {
     const navigate = useNavigate()
 
     function handleClick() {
-        navigate('/home')
+        navigate('/Login')
     }
     return (
         <ErrorContainer>
@@ -16,7 +16,7 @@ export function Error() {
             <p>Tem nada aqui não doido!</p>
             </div>
             <ImageContainer src="/404.png"/>
-            <button onClick={handleClick}>Voltar para Home</button>
+            <button onClick={handleClick}>Voltar para Login</button>
         </ErrorContainer>
 
         

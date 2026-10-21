@@ -6,8 +6,11 @@ export const HeaderContainer = styled.div`
 
     background-color: #f0fdfa;
 
-    padding: 20px;
+    padding: 0px 20px;
 
+    h1 {
+        color: var(--teal-700)
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;
