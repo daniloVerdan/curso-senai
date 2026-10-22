@@ -1,5 +1,6 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
 import { Home } from './pages/Home'
+import { User } from './pages/User'
 import { Error } from './pages/Error'
 import { Login } from './pages/Login'
 import { PrivateRoute } from "./components/PrivateRoute";
@@ -10,9 +11,8 @@ export const router = createBrowserRouter([
         path: '/',
         element: <PrivateRoute/>,
         children: [
-            {
-        path: '/home', element: <Home/>
-        },
+            {path: '/home', element: <Home/>},
+            {path: '/users/:id', element: <User/>},
 
         ]
     },
