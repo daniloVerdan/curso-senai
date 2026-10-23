@@ -15,6 +15,24 @@ export function User() {
 
     const navigate = useNavigate()
 
+    async function deleteUser() {
+            const response = await axios.delete(
+                `https://reqres.in/api/users/${id}`,
+                {
+                    headers: {
+                        'x-api-key': import.meta.env.API_KEY
+                    }
+                }
+            )
+
+            const data = response.data.data
+
+            setUser(data)
+
+        }
+
+    
+
     useEffect(()=> {
         async function getUser() {
             const response = await axios.get(
@@ -69,6 +87,7 @@ export function User() {
         </UserListContainer>
         <ButtonsContainer>
             <button onClick={back}>Voltar</button>
+            <button onClick={deleteUser}>Deletar</button>
         </ButtonsContainer>
     </HomeContainer>
 )
