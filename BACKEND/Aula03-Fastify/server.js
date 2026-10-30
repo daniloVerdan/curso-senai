@@ -26,12 +26,16 @@ app.get('/tasks/:id', async (req, res) => {
 // ROTA GET COM URL QUERY localhost:3000/tasks?done=true
 app.get('/tasks-done', async (req, res) => {
 
-    const tasksDone = tasks.filter(task => String(task.done) ===
-        req.query.done)
-
-    console.log(tasksDone)
+    const tasksDone = tasks.filter(task => String(task.done) === req.query.done)
 
     res.code(200).send(tasksDone)
+})
+
+// ROTA DELETE
+app.delete('/tasks/:id', async (req, res) => {
+    tasks = tasks.filter(task => task.id !== req.params.id)
+
+    res.code(202).send(tasks)
 })
 
 //ROTA POST
@@ -48,13 +52,32 @@ app.post('/tasks', async (req, res) => {
 
 // PUT
 app.put('/tasks/:id', async (req, res) => {
+
     const body = req.body
     const index = tasks.findIndex(p => p.id === body.id)
-    if (index === -1)
-        return
+    if (index === -1) {
+        return { error: "Erro, task não encontrada"}
+    }
+
+    tasks[index] = { ...tasks[index], ...body }
+
+    res.code(200).send(tasks[index])
 })
 
-// DELETE
+// ROTA PATCH - UPDATE DONE
+
+app.patch('/tasks/:id', async (req, res) => {
+
+    const index = tasks.findIndex(p => p.id === req.params.id)
+    if (index === -1) {
+        return { error: "Erro, task não encontrada"}
+    }
+
+    tasks[index] = { ...tasks[index], "done": !tasks[index].done }
+
+    res.code(200).send(tasks[index])
+
+})
 
 app.listen({ port : 3000}), (err, address) => {
     if(err) {
