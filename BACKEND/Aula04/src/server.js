@@ -1,10 +1,9 @@
 // INICIAR SERVIDOR
 
 import { buildApp } from './app.js'
-import { config } from 'dotenv'
+import { configDotenv } from "dotenv"
 
-config()
-
+configDotenv()
 
 const app = buildApp()
 
