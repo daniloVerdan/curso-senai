@@ -11,4 +11,4 @@ export const db = await mysql.createConnection({
     queueLimit: 0
 })
 
-console.log("conextado ao mysql!")
+console.log("conectado ao mysql!")

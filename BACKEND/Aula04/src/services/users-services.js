@@ -15,9 +15,8 @@ export async function getUserById(id) {
 
 export async function postUser(body) {
     const { name, email, password } = body
-    const id = v4()
-    const createdAt = arroz
-    const user = await db.query("INSERT INTO * FROM usuarios (id, name, email, password, createdAt) VALUES (?, ?, ?, ?, ?)", [v4(), name, email, password, arroz])
+
+    const user = await db.query("INSERT INTO usuarios (id, name, email, password, createdAt) VALUES (?, ?, ?, ?, ?)", [v4(), name, email, password, "arroz"])
     
     return user
 }
