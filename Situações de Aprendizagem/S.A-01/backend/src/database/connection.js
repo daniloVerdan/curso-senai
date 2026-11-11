@@ -2,10 +2,10 @@ import mysql from 'mysql2/promise'
 
 export const db = await mysql.createConnection({
     host: 'localhost',
-    port: 3309,
+    port: 3307,
     user: 'root',
     password: '123',
-    database: 'my-data-base',
+    database: 'techsolutions-db',
     waitForConnection: true,
     connectionLimit: 10,
     queueLimit: 0

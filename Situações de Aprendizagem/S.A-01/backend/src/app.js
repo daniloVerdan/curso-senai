@@ -1,5 +1,5 @@
 import Fastify from 'fastify'
-import { usersRoutes } from './routes/users-routes.js'
+import { cadastrosRoutes } from './routes/cadastro-routes.js'
 import cors from '@fastify/cors'
 
 export function buildApp() {
@@ -8,7 +8,7 @@ export function buildApp() {
 
     app.register(cors, {origin: '*'})
 
-    app.register(usersRoutes, { prefix: '/cadastro' })
+    app.register(cadastrosRoutes, { prefix: '/cadastro' })
 
     return app
 }
