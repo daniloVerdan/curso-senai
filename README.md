@@ -21,17 +21,6 @@ Atualmente, o foco deste repositório é desenvolvimento web.
 - **JavaScript:** lógica de programação e interatividade.
 - **Git e GitHub:** versionamento e organização dos projetos.
 
-## 🗂️ Estrutura do repositório
-
-```text
-curso-senai/
-├── BACKEND/
-├── html-css/
-├── javascript/
-├── .gitignore
-└── README.md
-```
-
 ### Pastas
 
 - **BACKEND/** — espaço destinado aos estudos e exercícios relacionados ao lado servidor, conforme esse conteúdo for desenvolvido.
