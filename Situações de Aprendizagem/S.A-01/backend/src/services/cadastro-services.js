@@ -26,15 +26,15 @@ export async function getEquipamentoById(id) {
 
 // Cadastrar equipamento
 export async function postEquipamento(body) {
-    const { nome, categoria, numero_de_serie, status } = body
+    const { nome, categoria, numero_de_serie, status, data_aquisicao } = body
 
     const id = v4()
 
     await db.query(
         `INSERT INTO equipamentos
-        (id, nome, categoria, numero_de_serie, status)
-        VALUES (?, ?, ?, ?, ?)`,
-        [id, nome, categoria, numero_de_serie, status]
+        (id, nome, categoria, numero_de_serie, status, data_aquisicao)
+        VALUES (?, ?, ?, ?, ?, ?)`,
+        [id, nome, categoria, numero_de_serie, status, data_aquisicao]
     )
 
     return {
@@ -42,7 +42,8 @@ export async function postEquipamento(body) {
         nome,
         categoria,
         numero_de_serie,
-        status
+        status,
+        data_aquisicao
     }
 }
 
