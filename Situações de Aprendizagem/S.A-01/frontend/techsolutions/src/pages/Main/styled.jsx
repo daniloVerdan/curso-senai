@@ -21,11 +21,18 @@ export const MainContainer = styled.div`
         padding: 20px;
         margin-top: 20px;
     }
+    
+    input {
+    border: 1px solid black;
+    width: 140px;
+    }
 `
 
 export const RegisterSection = styled.div`
     background-color: #5e5c5c;
-    padding: 8px;
+    font-family: "Montserrat", sans-serif;
+    padding: 20px;
+    width: 890px;
 
     display: flex;
     flex-direction: column;
@@ -36,7 +43,8 @@ export const RegisterSection = styled.div`
 
 export const ListSection = styled.div`
     background-color: #8f8e8e;
-    padding: 10px;
+    font-family: "Montserrat", sans-serif;
+    padding: 20px;
     width: 890px;
     
 
@@ -49,4 +57,5 @@ export const ListSection = styled.div`
     #itens {
     background-color: white;
     }
+    
 `

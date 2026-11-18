@@ -6,7 +6,10 @@ export function buildApp() {
     
     const app = Fastify({ logger: true })
 
-    app.register(cors, {origin: '*'})
+    app.register(cors, {
+        origin: '*',
+        methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS']
+    })
 
     app.register(cadastrosRoutes, { prefix: '/cadastro' })
 

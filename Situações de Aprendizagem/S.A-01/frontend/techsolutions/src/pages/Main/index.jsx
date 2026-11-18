@@ -5,6 +5,9 @@ import { MainContainer, RegisterSection, ListSection } from "./styled"
 
 export function Main() {
     const [ cadastro, setCadastro ] = useState([])
+    const [ paginaAtual, setPaginaAtual ] = useState(1)
+    const [ itensPorPagina ] = useState(1)
+    const [ totalPaginas, setTotalPaginas ] = useState(1)
     const [ formData, setFormData ] = useState({
         nome: '',
         categoria: '',
@@ -14,7 +17,7 @@ export function Main() {
     })
 
     const fetchCadastro = async () => {
-        const response = await axios.get('http://127.0.0.1:3003/cadastro')
+        const response = await axios.get(`http://127.0.0.1:3003/cadastro?_page=${paginaAtual}&_per_page=${itensPorPagina}`)
         setCadastro(response.data)
     }
 
@@ -30,6 +33,14 @@ export function Main() {
 
         setCdastro([...cadastro, formData])
         console.log(response)
+    }
+
+    const deletarEquip = async (id) => {
+        const response = await axios.delete(`http://127.0.0.1:3003/cadastro/${id}`)
+
+        setCadastro([...cadastro, formData])
+        console.log(response)
+        alert("produto excluido!");
     }
 
     useEffect(() => {
@@ -69,11 +80,19 @@ export function Main() {
 
                     <input 
                         type="text"
-                        placeholder="status"
+                        placeholder="Status"
                         name="status"
                         value={formData.status}
-                        onChange={handleInputChange} 
+                        onChange={handleInputChange}
+                        list="status-options"
                     />
+
+                    <datalist id="status-options">
+                        <option value="Disponível" />
+                        <option value="Em manutenção" />
+                        <option value="Indisponível" />
+                    </datalist>
+                    
 
                     <input 
                         type="date"
@@ -109,7 +128,9 @@ export function Main() {
                                         <td id='itens'>{equipamento.numero_de_serie}</td>
                                         <td id='itens'>{equipamento.status}</td>
                                         <td id='itens'>{equipamento.data_aquisicao}</td>
-
+                                        <td>
+                                            <button onClick={() => deletarEquip(equipamento.id)}>Excluir</button>
+                                        </td>
                                     </tr>
                                 ))
                             }
