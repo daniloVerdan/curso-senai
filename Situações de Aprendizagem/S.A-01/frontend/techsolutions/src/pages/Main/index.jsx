@@ -5,8 +5,9 @@ import { MainContainer, RegisterSection, ListSection } from "./styled"
 
 export function Main() {
     const [ cadastro, setCadastro ] = useState([])
+    const [editandoId, setEditandoId] = useState(null)
     const [ paginaAtual, setPaginaAtual ] = useState(1)
-    const [ itensPorPagina ] = useState(1)
+    const itensPorPagina = 10
     const [ totalPaginas, setTotalPaginas ] = useState(1)
     const [ formData, setFormData ] = useState({
         nome: '',
@@ -17,8 +18,11 @@ export function Main() {
     })
 
     const fetchCadastro = async () => {
-        const response = await axios.get(`http://127.0.0.1:3003/cadastro?_page=${paginaAtual}&_per_page=${itensPorPagina}`)
-        setCadastro(response.data)
+        const response = await axios.get(`http://127.0.0.1:3003/cadastro?pagina=${paginaAtual}&limite=${itensPorPagina}`)
+        console.log(response.data)
+        console.log(response.data.data)
+        setCadastro(response.data.data)
+        setTotalPaginas(response.data.pages)
     }
 
     const handleInputChange = (e) => {
@@ -28,24 +32,72 @@ export function Main() {
 
     const handleSubmit = async (e) => {
         e.preventDefault()
+
+        if (editandoId) {
+        await axios.put(
+            `http://127.0.0.1:3003/cadastro/${editandoId}`,
+            formData
+        )
+
+        alert("Equipamento atualizado!")
+    } else {
         console.log('enviado')
         const response = await axios.post('http://127.0.0.1:3003/cadastro', formData)
 
-        setCdastro([...cadastro, formData])
-        console.log(response)
+        alert("Equipamento cadastrado!")
+    }
+
+        setFormData({
+            nome: '',
+            categoria: '',
+            numero_de_serie: '',
+            status: '',
+            data_aquisicao: '' 
+        })
+
+        setEditandoId(null)
+
+        fetchCadastro()
+
+        // setCdastro([...cadastro, formData])
+        // console.log(response)
     }
 
     const deletarEquip = async (id) => {
         const response = await axios.delete(`http://127.0.0.1:3003/cadastro/${id}`)
 
-        setCadastro([...cadastro, formData])
-        console.log(response)
-        alert("produto excluido!");
+        fetchCadastro()
+
+        alert("Produto excluído!")
+    }
+
+    const editarEquip = (equipamento) => {
+    setEditandoId(equipamento.id)
+
+    setFormData({
+        nome: equipamento.nome,
+        categoria: equipamento.categoria,
+        numero_de_serie: equipamento.numero_de_serie,
+        status: equipamento.status,
+        data_aquisicao: equipamento.data_aquisicao
+    })
+}
+
+    const proximaPagina = () => {
+        if (paginaAtual < totalPaginas) {
+            setPaginaAtual(paginaAtual + 1)
+        }
+    }
+
+    const paginaAnterior = () => {
+        if (paginaAtual > 1) {
+            setPaginaAtual(paginaAtual - 1)
+        }
     }
 
     useEffect(() => {
         fetchCadastro();
-    }, [cadastro])
+    }, [paginaAtual])
 
     return (
         <MainContainer>
@@ -129,6 +181,7 @@ export function Main() {
                                         <td id='itens'>{equipamento.status}</td>
                                         <td id='itens'>{equipamento.data_aquisicao}</td>
                                         <td>
+                                            <button onClick={() => editarEquip(equipamento)}>Editar</button>
                                             <button onClick={() => deletarEquip(equipamento.id)}>Excluir</button>
                                         </td>
                                     </tr>
@@ -136,7 +189,11 @@ export function Main() {
                             }
                         </tbody>
                     </table>
-
+                <div>
+                    <button onClick={paginaAnterior}>Anterior</button>
+                    <span>Pagina {paginaAtual} de {totalPaginas}</span>
+                    <button onClick={proximaPagina}>Próximo</button>
+                </div>
 
             </ListSection>
 

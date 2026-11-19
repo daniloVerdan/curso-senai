@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const MainContainer = styled.div`
     background-color: #dedede;
+    border: 1px solid black;
 
     height: 100vh;
     width: 100vw;
@@ -17,6 +18,7 @@ export const MainContainer = styled.div`
         font-weight: bold;
         font-size: 34px;
         width: 890px;
+        border: 1px solid black;
 
         padding: 20px;
         margin-top: 20px;
@@ -33,12 +35,16 @@ export const RegisterSection = styled.div`
     font-family: "Montserrat", sans-serif;
     padding: 20px;
     width: 890px;
+    border: 1px solid black;
 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
     gap: 10px;
+    button {
+    border: 1px solid black;
+    }
 `
 
 export const ListSection = styled.div`
@@ -46,6 +52,7 @@ export const ListSection = styled.div`
     font-family: "Montserrat", sans-serif;
     padding: 20px;
     width: 890px;
+    border: 1px solid black;
     
 
     display: flex;
@@ -56,6 +63,10 @@ export const ListSection = styled.div`
 
     #itens {
     background-color: white;
+    }
+
+    button {
+    border: 1px solid black;
     }
     
 `

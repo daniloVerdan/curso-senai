@@ -4,9 +4,12 @@ import { db } from "../database/connection.js"
 
 
 // Listar todos os equipamentos
-export async function getAllEquipamentos() {
+export async function getAllEquipamentos(pagina = 1, limite = 10) {
+    const offset = (pagina - 1) * limite
+
     const [equipamentos] = await db.query(
-        "SELECT * FROM equipamentos"
+        "SELECT * FROM equipamentos LIMIT ? OFFSET ?",
+        [limite, offset]
     )
 
     return equipamentos
@@ -88,7 +91,8 @@ export async function patchEquipamentoService(id, body) {
         "nome",
         "categoria",
         "numero_de_serie",
-        "status"
+        "status",
+        "data_aquisicao"
     ]
 
     const campos = Object.keys(body).filter(

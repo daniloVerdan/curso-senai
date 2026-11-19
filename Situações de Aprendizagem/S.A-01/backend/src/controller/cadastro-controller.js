@@ -6,12 +6,34 @@ import {
     postEquipamento,
     putEquipamentoService
 } from "../services/cadastro-services.js"
+import { db } from '../database/connection.js'
 
 
 export async function listAllEquipamentos(request, response) {
-    const cadastros = await getAllEquipamentos()
 
-    return response.code(200).send(cadastros)
+    const { pagina = 1, limite = 10 } = request.query
+
+    const offset = (Number(pagina) - 1) * Number(limite)
+
+    // Buscar equipamentos
+    const [cadastros] = await db.query(
+        'SELECT * FROM equipamentos LIMIT ? OFFSET ?',
+        [Number(limite), offset]
+    )
+
+    // Contar equipamentos
+    const [[resultado]] = await db.query(
+        'SELECT COUNT(*) AS total FROM equipamentos'
+    )
+
+    const total = resultado.total
+    const totalPaginas = Math.ceil(total / Number(limite))
+
+    return response.code(200).send({
+        data: cadastros,
+        total,
+        pages: totalPaginas
+    })
 }
 
 
